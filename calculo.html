@@ -1,101 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechSolutions - Soluções em Tecnologia</title>
 
-    <!-- Bootstrap 4 CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechSolutions - Soluções em Tecnologia</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-      body {
-        padding-top: 70px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-      .navbar-custom {
-        background-color: #0056b3;
-      }
+    body {
+      padding-top: 70px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-      .btn-outline {
-        border: 2px solid white;
-        color: white;
-      }
-      .btn-outline:hover {
-        border: 2px solid rgb(0, 0, 0);
-        color: rgb(0, 0, 0);
-      }
-      .social-icon {
-        margin-right: 1%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand font-weight-bold" href="#home">
-          TechSolutions
-        </a>
-        <div class="navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfólio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="equipe.html">Equipe</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="calculo.html">Cálculo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-            </li>
-          </ul>
-        </div>
+    .navbar-custom {
+      background-color: #0056b3;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border: 2px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0);
+    }
+
+    .social-icon {
+      margin-right: 1%;
+    }
+
+    /* Container do formulário */
+    .form-container {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: #f0f8ff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 86, 179, 0.2);
+    }
+
+    /* Rótulos */
+    .form-container label {
+      font-weight: 600;
+      color: #0056b3;
+      margin-bottom: 5px;
+    }
+
+    /* Campos de entrada */
+    .form-container input[type="number"] {
+      border: 1px solid #90caf9;
+      border-radius: 6px;
+      padding: 10px;
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-container input[type="number"]:focus {
+      border-color: #0056b3;
+      background-color: #bbdefb;
+      outline: none;
+    }
+
+    /* Botão de calcular */
+    .form-container #calcular {
+      background-color: #0056b3;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .form-container #calcular:hover {
+      background-color: #003c82;
+    }
+
+    /* Resultado */
+    .form-container .alert-success {
+      background-color: #bbdefb;
+      border: 1px solid #64b5f6;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 30px;
+      color: #0d47a1;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="#home">
+        TechSolutions
+      </a>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equipe.html">Equipe</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="calculo.html">Cálculo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Main Content -->
-    <!--form para exemplo js-->
-    <div class="container" style="max-width: 500px; margin: auto;"></div>
+  <div class="container form-container">
     <div class="form-group">
       <label for="txtvalor1">Valor 1</label>
-      <input type="number" name="txtvalor1" id="txtvalor1" class="form-control" step="0.5" value>
+      <input type="number" name="txtvalor1" id="txtvalor1" class="form-control" step="0.5">
     </div>
     <div class="form-group">
       <label for="txtvalor2">Valor 2</label>
-      <input type="number" name="txtvalor2" id="txtvalor2" class="form-control" step="0.5" value>
+      <input type="number" name="txtvalor2" id="txtvalor2" class="form-control" step="0.5">
     </div>
     <div class="form-group">
-      <label for="txtvalor2">Valor 3</label>
-      <input type="number" name="txtvalor3" id="txtvalor3" class="form-control" step="0.5" value>
+      <label for="txtvalor3">Valor 3</label>
+      <input type="number" name="txtvalor3" id="txtvalor3" class="form-control" step="0.5">
     </div>
     <button id="calcular" class="btn btn-primary">Calcular</button>
 
     <div class="alert alert-success mt-4" role="alert">
       <p id="txtresultado">Resultado: </p>
     </div>
+  </div>
 
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>
