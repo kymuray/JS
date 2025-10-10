@@ -74,19 +74,20 @@
 
 /* Botão de calcular */
 .form-container #calcular {
-  background-color: #0056b3;
-  border: none;
-  color: white;
+  background-color: #ffffff; /* branco */
+  border: 2px solid #0056b3; /* borda azul principal */
+  color: #0056b3; /* texto azul principal */
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 10px;
 }
 
 .form-container #calcular:hover {
-  background-color: rgb(55, 139, 230); /* azul escuro */
+  background-color: rgb(55, 139, 230); /* azul escuro no hover */
+  color: #ffffff; /* texto branco no hover */
 }
 
 /* Resultado */
@@ -161,3 +162,4 @@
 
 
 </html>
+
